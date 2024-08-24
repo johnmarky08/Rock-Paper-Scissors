@@ -16,7 +16,7 @@
         }
         static void RPS(string ReadName)
         {
-            Console.WriteLine("Hi {0}! Choose Between:\n[ R ] Rock\n[ P ] Paper\n[ S ] Scissors", ReadName);
+            Console.WriteLine("{0}! Choose Between:\n[ R ] Rock\n[ P ] Paper\n[ S ] Scissors", (ReadName == "You") ? "Hello" : String.Format("Hi {0}", ReadName));
 
             string PlayerChoice = "";
             bool Choosed = false;
@@ -64,7 +64,7 @@
             if (Key == ConsoleKey.G)
             {
                 Console.Clear();
-                Console.WriteLine("YOUR SCORE: {0}\nBOT SCORE: {1}", Convert.ToString(PlayerWon), Convert.ToString(BotWon));
+                Console.WriteLine("YOUR SCORE: {0}\nBOT SCORE: {1}\n", Convert.ToString(PlayerWon), Convert.ToString(BotWon));
                 RPS(ReadName);
             }
         }
