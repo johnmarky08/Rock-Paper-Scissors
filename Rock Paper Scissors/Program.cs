@@ -43,7 +43,7 @@
                 else Console.WriteLine("Please Choose Between R, P, and S!");
             }
 
-            string[] choices = ["Rock", "Paper", "Scissors"];
+            string[] choices = { "Rock", "Paper", "Scissors" };
             string BotChoice = choices[(new Random()).Next(choices.Length)];
             int Won = Winner(PlayerChoice, BotChoice);
             string Win = (Won == 0) ? "It's A Tie" : (Won == 1) ? String.Format("{0} Won", ReadName) : (Won == 2) ? "Bot Won" : "Error";
